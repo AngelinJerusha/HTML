@@ -5,11 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberSprintCTF</title>
+    <title>CTF</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 style="color:white;text-align:center;font-size: 80px;font-family: Georgia;"><b>CYBER SPRINT CTF</b></h1>
+    <h1 style="color:white;text-align:center;font-size: 80px;font-family: Georgia;"><b>CTF</b></h1>
         <button id="Admin" style="background-color: crimson;" type="button button1">ADMIN</button>
         <br>
         <button id="Login" style="background-color: rgb(69, 116, 234);" type="button button2">LOGIN</button>
