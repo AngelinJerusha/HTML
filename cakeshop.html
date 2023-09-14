@@ -1,0 +1,111 @@
+<!--HTML Program to design a basic cake shop page and calculate the bill by giving the numver of cakes needed as input-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray's Cake Shop</title>
+  <style>
+    h1{
+    font-size: 400%;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+body {
+    background-image: url('cakee.avif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100% ;
+  }
+img{
+    margin: 45px;
+}
+p{
+    font-size: 200%;
+    font-weight: 150;
+    margin: 2px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+}
+.item{
+    text-align: center;
+}
+form{
+    margin: 1%;
+}
+
+  </style>
+</head>
+<body>
+    <h1>RAY'S CAKE SHOP</h1>
+    <div class="grid-container">
+        <div class="item">
+            <img src="C:\Users\hp\Downloads\ccake.jpg" alt="Chocolate Cake" width="200" height="200"><br>
+            <p>Chocolate cake Rs:200 </p>
+        </div>
+        <div class="item">
+            <img src="C:\Users\hp\Downloads\bcake.jpg" alt="Blackforest Cake" width="200" height="200"><br>
+            <p>Blackforest cake Rs:300 </p>
+        </div>
+        <div class="item">
+            <img src="C:\Users\hp\Downloads\rcake.jpg" alt="Red Velvet Cake" width="200" height="200"><br>
+            <p>Red Velvet cake Rs:350 </p>
+        </div>
+        <div class="item">
+            <img src="C:\Users\hp\Downloads\scake.jpg" alt="Strawberry Cake" width="200" height="200"><br>
+            <p>Strawberry cake Rs:400 </p>
+        </div>
+        <div class="item">
+            <img src="C:\Users\hp\Downloads\vcake.jpg" alt="Vanilla Cake" width="200" height="200"><br>
+            <p>Vanilla cake Rs:250 </p>
+        </div>
+    </div>
+    <div class="center-content">
+        <form style="justify-content: center; display:grid;">
+            <label for="ccake">Number of Chocolate cake: </label>
+            <input type="number" id="ccake" name="ccake" min="0" value="0" onchange="calculateTotal()"><br>
+            <label for="bcake">Number of Blackforest cake</label>
+            <input type="number" id="bcake" name="bcake" min="0" value="0" onchange="calculateTotal()"><br>
+            <label for="rcake">Number of Red Velvet cake: </label>
+            <input type="number" id="rcake" name="rcake" min="0" value="0" onchange="calculateTotal()"><br>
+            <label for="scake">Number of Strawberry cake</label>
+            <input type="number" id="scake" name="scake" min="0" value="0" onchange="calculateTotal()"><br>
+            <label for="vcake">Number of Vanilla cake: </label>
+            <input type="number" id="vcake" name="vcake" min="0" value="0" onchange="calculateTotal()"><br>
+          </form>
+    
+    </div>
+    
+<p style="text-align: center;">Total Cost: $<span id="total">0</span></p>
+<script>
+function calculateTotal() {
+  const chocolateQuantity = parseInt(document.getElementById('ccake').value);
+  const blackforestQuantity = parseInt(document.getElementById('bcake').value);
+  const redvelvetQuantity = parseInt(document.getElementById('rcake').value);
+  const strawberryQuantity = parseInt(document.getElementById('scake').value);
+  const vanillaQuantity = parseInt(document.getElementById('vcake').value);
+
+  const chocolatePrice = 200;
+  const blackforestPrice = 300;
+  const redvelvetPrice = 350;
+  const strawberryPrice = 400;
+  const vanillaPrice = 250;
+  
+  const totalCost = (chocolateQuantity * chocolatePrice) +
+                    (blackforestQuantity * blackforestPrice) +
+                    (redvelvetQuantity * redvelvetPrice) +
+                    (strawberryQuantity * strawberryPrice)+
+                    (vanillaQuantity * vanillaPrice);
+  
+  document.getElementById('total').textContent = totalCost;
+}
+</script>
+</body>
+</html>
+
